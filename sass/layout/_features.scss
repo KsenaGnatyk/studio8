@@ -1,0 +1,41 @@
+.features {
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__icon {
+    @include flex;
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: start;
+    }
+  }
+
+  &__text {
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--primary-text-color);
+  }
+}

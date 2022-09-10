@@ -1,0 +1,39 @@
+.work {
+  padding-top: 0;
+  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  &__title {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    width: calc((100% - 60px) / 3);
+    position: relative;
+  }
+
+  &__wrap {
+    @include flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__subtitle {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--second-title-text-color);
+  }
+}
